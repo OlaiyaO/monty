@@ -5,8 +5,11 @@
  * @stack: Pointer to the head of the stack.
  * @line_number: Line number in the Monty script.
  */
+
 void _sub(stack_t **stack, unsigned int line_number)
 {
+	stack_t *temp;
+
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
@@ -14,6 +17,12 @@ void _sub(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n -= (*stack)->n;
+
+	temp = *stack;
 	*stack = (*stack)->next;
-	(*stack)->prev = NULL;
+
+	if (*stack != NULL)
+		(*stack)->prev = NULL;
+
+	free(temp);
 }
