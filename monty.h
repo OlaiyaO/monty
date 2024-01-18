@@ -62,6 +62,7 @@ int execute_opcode(
 		stack_t **stack,
 		unsigned int line_number,
 		FILE *monty_file);
+
 void free_stack(stack_t *head);
 void addnode(stack_t **head, int data);
 void enqueue(stack_t **head, int data);
@@ -70,5 +71,6 @@ void _queue(stack_t **head, unsigned int counter);
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **head, unsigned int line_number);
+void _pop(stack_t **head, unsigned int line_number);
 
 #endif /* MONTY_H */
