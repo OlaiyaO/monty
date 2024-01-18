@@ -1,7 +1,6 @@
 #include "monty.h"
 
 appstate_t appstate = {NULL, NULL, NULL, 0};
-
 /**
  * main - Entry point for the Monty interpreter.
  * @argc: Number of command-line arguments.
@@ -45,7 +44,6 @@ int main(int argc, char *argv[])
 			}
 		}
 	}
-
 	free_stack(stack);
 	fclose(monty_file);
 	free(appstate.content);

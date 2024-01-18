@@ -23,6 +23,7 @@ int execute_opcode(
 		{"swap", _swap},
 		{"add", _add},
 		{"nop", _nop},
+		{"sub", _sub},
 		{NULL, NULL}
 	};
 
@@ -30,9 +31,6 @@ int execute_opcode(
 	char *opcode;
 
 	opcode = strtok(line_content, " \n\t");
-
-	if (opcode && opcode[0] == '#')
-		return (0);
 
 	appstate.arg = strtok(NULL, " \n\t");
 
