@@ -48,7 +48,8 @@ typedef struct instruction_s
  * @mode_flag: Flag for stack or queue mode.
  * Description: Encapsulates essential variables for runtime application state.
  */
-typedef struct appstate_s {
+typedef struct appstate_s
+{
 	char *arg;
 	FILE *file;
 	char *content;
@@ -68,5 +69,6 @@ void _stack(stack_t **head, unsigned int counter);
 void _queue(stack_t **head, unsigned int counter);
 void _push(stack_t **stack, unsigned int line_number);
 void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **head, unsigned int line_number);
 
 #endif /* MONTY_H */

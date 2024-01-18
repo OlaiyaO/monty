@@ -18,6 +18,7 @@ int execute_opcode(
 	instruction_t opcode_table[] = {
 		{"push", _push},
 		{"pall", _pall},
+		{"pint", _pint},
 		{NULL, NULL}
 	};
 

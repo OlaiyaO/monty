@@ -41,10 +41,10 @@ int main(int argc, char *argv[])
 			if (execute_opcode(line_content, &stack, line_number, monty_file) != 0)
 			{
 				free_stack(stack);
-				return EXIT_FAILURE;
+				return (EXIT_FAILURE);
 			}
 		}
-	}	
+	}
 
 	free_stack(stack);
 	fclose(monty_file);
