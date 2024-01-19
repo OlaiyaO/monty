@@ -31,6 +31,8 @@ int execute_opcode(
 		{"pstr", _pstr},
 		{"rotl", _rotl},
 		{"rotr", _rotr},
+		{"queue", _queue},
+		{"stack", _stack},
 		{NULL, NULL}
 	};
 
